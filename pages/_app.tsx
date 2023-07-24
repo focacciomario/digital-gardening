@@ -109,6 +109,7 @@ const MyApp = ({ Component, pageProps }: AppProps<CustomAppProps>) => {
                     />
                 </>
             )}
+            
             <SearchProvider searchConfig={siteConfig.search}>
                 <Layout {...layoutProps}>
                     <Component {...pageProps} />

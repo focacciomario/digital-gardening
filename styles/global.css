@@ -4,6 +4,9 @@ footer > p {
   display:none !important;
 }
 
+.backdrop-blur{
+  z-index:999 !important;
+}
 
 .nav-logo {
   height: 2.25rem;
