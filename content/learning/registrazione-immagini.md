@@ -1,8 +1,7 @@
 ---
-title: Registrazione di immagini cliniche
-description: Cenni ai processi e tecniche di registrazione e fusione
+title: Il problema della registrazione/fusione di immagini cliniche
+description: Approfondimento di processi e tecniche di registrazione delle immagini e cenni alle metriche di validazione
 date: 2023-03-27
-layout: simple
 --- 
 # Registrazione di immagini in clinica
 
@@ -18,13 +17,13 @@ Il processo di *fusione delle immagini* è assimilabile al processo di somma del
 
 Ovviamente la fusione può essere effettuata anche senza registrazione; in questo caso però non ci saranno punti di controllo corrispondenti sull'immagine "fixed". 
 
-## Registrazione e co-registrazione delle immagini
+**Registrazione e co-registrazione delle immagini**
 Come detto in precedenza, la *registrazione* è quel processo che cerca un operatore di trasformazione per sovrapporre le due immagini facendone corrispondere i punti della griglia di controllo. 
 La **co-registrazione** è quel procedimento che si può effettuare sulle strumentazioni di imaging ibrido: si acquisiscono due immagini (ad esempio MR e SPECT) del paziente posizionato nella medesima posizione, al medesimo istante. Sebbene siano due immagini completamente differenti, è possibile effettuarne la sovrapposizione (o fusione) senza passare dalla registrazione in quanto si da per scontato che il paziente è nella stessa posizione allo stesso istante di acquisizione delle immagini. 
 
 ## Classificazione degli operatori di trasformazione di un'immagine
 
-### 1° Classificazione
+### 1 Classificazione
 In relazione alla linearità dell'operatore di trasformazione
 
 La prima tipologia di classificazione che si può effettuare riguarda la linearità (o non linearità) dell'operatore di trasformazione delle immagini che si sta cercando. 
@@ -38,41 +37,36 @@ La prima tipologia di classificazione che si può effettuare riguarda la lineari
 - **REGISTRAZIONE AFFINE E PROIETTIVA:** Il modello affine (Zhang and Rangarajan, 2004) include la traslazione, la rotazione e la scalatura. Il parallelismo verrà preservato se linee diritte dell’immagine reference verranno mappate su linee diritte nell’immagine template. La registrazione affine e proiettiva può arrivare fino a 12 gradi di libertà nello spazio
 - **REGISTRAZIONE DEFORMABILE:** le distanze fra i punti dell'immagine possono essere modificate in maniera non lineare una rispetto all'altra. 
 
-### 2° Classificazione
+### 2 Classificazione
 La seconda classificazione che si può evidenziare, parlando di registrazione delle immagini, è correlata al tipo di operazione richiesta. Si parlerà dunque di: 
 - **REGISTRAZIONE GLOBALE:** se l'operatore di trasformazione è applicabile a tutti i punti dell'immagine
 - **REGISTRAZIONE LOCALE:** se è possibile evidenziare una regione di interesse (ROI - Region Of Interest) all'interno delle immagini da registrare
 
-### 3° Classificazione
+### 3 Classificazione
 Infine, il terzo tipo di classificazione che si può effettuare parlando della registrazione di immagini in ambito clinico è afferente alla modalità di acquisizione dell'immagine stessa: 
 - **REGISTRAZIONE MONO-MODALE:** se l'input della registrazione (quindi le due immagini per cui si vuole calcolare l'operatore di trasformazione) è dello stesso tipo (TC-TC, MRI-MRI ecc.)
 - **REGISTRAZIONE MULTI-MODALE:** se gli input derivano da modalità di acquisizioni diverse (es. TC-MRI, TC-PET). In questo caso è corretto classificare risonanze acquisite con sequenze diverse.
 
-#### A cosa serve la registrazione delle immagini in ambito clinico?
+**A cosa serve la registrazione delle immagini in ambito clinico?**
 1. Rendere possibile la sovrapposizione ed il confronto di strutture anatomiche di interesse (anche per follow-up)
 2. Integrare all'interno di un'unica immagine, informazioni differenti
 3. Sovrapporre/confrontare il piano pre-operatorio effettuato con la situazione in real-time (intra-operatorio)
 4. Determinare e visualizzare sul piano la posizione di strumenti chirurgici rispetto alle strutture anatomiche oggetto d'intervento
 
 ![[Screenshot 2023-06-04 alle 15.41.21.png]]
-
 ## Modalità di registrazione delle immagini
 Le modalità di registrazione delle immagini cliniche sono diverse e possono basarsi sulla registrazione di tipo: 
 1. **Registrazione manuale:** significa visualizzare i due dataset e spostare manualmente l'oggetto in modo tale che questo corrisponda a dei siti anatomici di interesse. È una trasformazione rigida, la cui accuratezza dipende dall'esperienza e dal giudizio dell'operatore che ne effettua la trasformazione. 
-	- La registrazione manuale può fare uso dei **dati DICOM**, infatti ogni scanner o tomografo ha un sistema di riferimento solidale al paziente, consentendo così di allineare i centri dell'immagine
+- La registrazione manuale può fare uso dei **dati DICOM**, infatti ogni scanner o tomografo ha un sistema di riferimento solidale al paziente, consentendo così di allineare i centri dell'immagine
 2. **Registrazione automatica:** significa lasciare agli algoritmi di registrazione il compito di allineamento delle immagini. La registrazione automatica può essere distinta in: 
-	- **Intensity based:** si calcola l'operazione di trasformazione confrontando iterazione per iterazione i livelli di grigio dei due dataset di immagini. Il confronto avviene sull'intensità dei livelli di grigio delle immagini e si basa sulla minimizzazione di una funzione di disparità
-	- **Geometry-based:** si basa sull'identificazione di punti fiduciali artificiali (marcatori, clips) o  su landmark anatomici segmentati (punti, profili, etc). Si stabilisce che questi punti debbano essere allineati.
-
+- **Intensity based:** si calcola l'operazione di trasformazione confrontando iterazione per iterazione i livelli di grigio dei due dataset di immagini. Il confronto avviene sull'intensità dei livelli di grigio delle immagini e si basa sulla minimizzazione di una funzione di disparità
+- **Geometry-based:** si basa sull'identificazione di punti fiduciali artificiali (marcatori, clips) o  su landmark anatomici segmentati (punti, profili, etc). Si stabilisce che questi punti debbano essere allineati.
 ### Metodi intensity-based: 
 Tipicamente si definisce una griglia che divide l'immagine in zone di interesse (ROI) all'interno della quale tutti i voxel assumeranno la stessa regola di trasformazione che si calcola. 
 La griglia può essere risoluta tanto quanto l'immagine (se ho un'immagine 512x512 avrò una griglia 512x512 e dovrò calcolare la trasformazione per ogni voxel dell'immagine perché la griglia e l'immagine corrispondono). La definizione della griglia definisce il dettaglio dell'immagine che si considera nell'ottimizzazione della funzione di costo.
 Nella fase di acquisizione, l'immagine ottenuta è riferita all'unità di misura dei *pixel*. La trasformazione che si andrà a calcolare dovrà essere trasformata dallo spazio dei pixel allo spazio reale (unità di misura in *mm*). 
 Considerata questa esigenza, prima della trasformazione si effettua una conversione dell'immagine dalle coordinate in *pixel* alle *coordinate fisiche*, si effettua quindi la trasformazione nelle coordinate fisiche, e si riconverte l'output in coordinate pixel per mostrare l'output finale. 
-
-![[Pasted image 20230604172644.png]]
-
-#### Cosa significa progettare un algoritmo di registrazione delle immagini cliniche? 
+*Cosa significa progettare un algoritmo di registrazione delle immagini cliniche?* 
 
 Il processo di registrazione è un processo iterativo che si ferma nel momento in cui raggiunge un certo obiettivo per la funzione di costo.
 
@@ -92,10 +86,9 @@ Per la rotazione, invece, esistono diverse convenzioni per definirne gli angoli.
 
 ![[Pasted image 20230604173705.png]]
 
-
 La rotazione completa (quindi considerare le tre rotazioni) significa fare una moltiplicazione tra matrici definendo così la rotazione dell'oggetto. Quindi, definire la rototraslazione del corpo rigido significa calcolare la matrice di rotazione, calcolarne le traslazioni e riempire la matrice di rototraslazione.
 
-### Trasformazione affine: 
+### Trasformazione affine
 Unisce ai parametri di rototraslazione dei parametri di scalatura detti scaling (sulla diagonale) e dei parametri taglio detti shearing (nella parte triangolare della matrice di rotazione).
 
 La proprietà fondamentale che ha la trasformazione affine è che mantiene il parallelismo della griglia tra i punti.
@@ -104,7 +97,7 @@ La proprietà fondamentale che ha la trasformazione affine è che mantiene il 
 
 ![[Pasted image 20230604174000.png]]
 
-### Trasformazione proiettiva: 
+### Trasformazione proiettiva
 Nell'ultima riga della matrice si aggiungono i parametri di distorsione (skewing) che non preservano il parallelismo della griglia. 
 
 ![[Pasted image 20230604174130.png]]
@@ -151,7 +144,6 @@ La selezione del tipo di metrica da utilizzare dipende fortemente dal tipo di re
 Alcune metriche hanno un largo spettro di cattura, altre richiedono una inizializzazione vicina alla posizione ottimale. Alcune metriche sono adatte per immagini acquisite con la stessa modalità (mono-modali), altre per diverse modalità (multi-modali). 
 
 Non esiste, in definitiva, una regola ben definita per decidere la metrica da utilizzare. Le seguenti sono le più usate e quelle che si sono rivelate più versatili ed efficienti dal punto di vista dei risultati ottenuti.
-
 ### Somma dei quadrati delle differenze delle intensità
 La metrica SSD (acronimo derivante dall’espressione inglese Squared Sum Difference), è utilizzata per co-registrazioni di immagini che condividono la stessa modalità di acquisizione. (mono-modality).
 Per stimare tale metrica si calcola la media della somma dei quadrati delle differenze delle intensità tra coppie corrispondenti di punti delle immagini da co-registrare. Date le immagini A e B il valore della SSD è dato da:
@@ -197,16 +189,3 @@ Un sistema composto, ad esempio, da sole palline verdi, è un sistema ad entropi
 $H_T$ e $H_S$ sono le entropie delle singole immagini da registrare, mentre $H_TS$ è l'entropia congiunta delle due immagini. 
 
 Quindi, nel caso di informazioni multi-modali, possiamo utilizzare solo la mutua informazione. Ovviamente vale che essa può essere utilizzata anche per immagini mono-modali.
-
-
-### Algoritmi di ottimizzazione
-Dopo aver definito la metrica, cioè il valore quantitativo che l'algoritmo deve calcolare per dire se le immagini sono sovrapposte bene oppure no, si effettua un confronto con il valore di fit. 
-Esistono diversi metodi per "muoversi" sulle funzioni (volumetriche, superfici o lineari).
-
-**Interpolatori**
-Gli interpolatori hanno la funzione di calcolare il livello di grigio nella posizione richiesta (pixel o voxel) e determinano l'appartenenza del valore calcolato all'immagine di riferimento. 
-
-Funzioni di interpolazione possono essere: 
-- Nearest Neighbour
-- Interpolazione trilineare
-- Splines e B-Splines

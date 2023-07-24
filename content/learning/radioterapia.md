@@ -1,25 +1,11 @@
-#UMG 
+---
+title: Approfondimento sulla radioterapia, applicazioni e sviluppi
+description: iORT, brachiterapia, radioterapia esterna, pianificazione, adroterapia, IGRT
+date: 2023-04-15
 
-**Lezione precedente:** EICA 12
+--- 
 
-- [[#Tipi di radioterapia:|Tipi di radioterapia:]]
-	- [[#Tipi di radioterapia:#Brachiterapia|Brachiterapia]]
-	- [[#Tipi di radioterapia:#IORT - Radioterapia Intra-Operatoria|IORT - Radioterapia Intra-Operatoria]]
-	- [[#Tipi di radioterapia:#Radioterapia esterna|Radioterapia esterna]]
-	- [[#Tipi di radioterapia:#Pianificazione ed esecuzione di un trattamento radioterapico esterno convenzionale|Pianificazione ed esecuzione di un trattamento radioterapico esterno convenzionale]]
-	- [[#Tipi di radioterapia:#Tecniche di radioLa terapia esterna|Tecniche di radioLa terapia esterna]]
-		- [[#Tecniche di radioLa terapia esterna#3D CRT - Conformazionale|3D CRT - Conformazionale]]
-		- [[#Tecniche di radioLa terapia esterna#IMRT - Ad intensità modulata|IMRT - Ad intensità modulata]]
-	- [[#Tipi di radioterapia:#Radioterapia stereotassica|Radioterapia stereotassica]]
-		- [[#Radioterapia stereotassica#Arco dinamico|Arco dinamico]]
-	- [[#Tipi di radioterapia:#Evoluzione della radioterapia: adroterapia|Evoluzione della radioterapia: adroterapia]]
-	- [[#Tipi di radioterapia:#Obiettivi della radioterapia|Obiettivi della radioterapia]]
-		- [[#Obiettivi della radioterapia#Errori tipici della radioterapia|Errori tipici della radioterapia]]
-			- [[#Errori tipici della radioterapia#PTV Concept|PTV Concept]]
-		- [[#Obiettivi della radioterapia#IGRT - Image Guided Radio Therapy|IGRT - Image Guided Radio Therapy]]
-
-
-# Lezione 13 - Radioterapia
+# Radioterapia
 
 La radioterapia sfrutta radiazioni ionizzanti in grado di danneggiare il patrimonio genetico delle cellule tumorali. La radioterapia rappresenta uno dei metodi più efficaci nel trattamento locale delle neoplasie. 
 
@@ -48,7 +34,7 @@ Il processo è spesso automatizzato: il robot è dotato di un braccio meccanizza
 **N.B.** Il trattamento di radioterapia esterna non dura molto, talvolta anche nell'ordine di pochi secondi. 
 
 
-### Pianificazione ed esecuzione di un trattamento radioterapico esterno convenzionale
+## Pianificazione ed esecuzione di un trattamento radioterapico esterno convenzionale
  *Basic radiation therapy workflow*
 
 1. **Diagnosi** - Al fine di avere una diagnosi è necessario acquisire delle immagini del paziente mediante CT
@@ -60,13 +46,13 @@ Il processo è spesso automatizzato: il robot è dotato di un braccio meccanizza
 
 La fase di *contouring structure* è generalmente svolto con una macchina APS dedicata proprio alla rivelazione dei contorni 3D dei singoli organi. 
 
-### Tecniche di radioLa terapia esterna
+## Tecniche di radioterapia esterna
 
-#### 3D CRT - Conformazionale
+### 3D CRT - Conformazionale
 Oggi la radioterapia con i raggi X di alta energia e con l'ausilio delle più recenti tecnologie si può eseguire trattamento in modo **conformazionale (3D CRT - Conformational Radioteraphy)**. 
 Ciò significa che conformiamo (adattiamo) il fascio energetico alla forma del contorno del distretto che si vuole irradiare. La confermazione del fascio avviene tramite l'adattamento della forma del collimatore, le cui lamelle mobili vengono movimentate al fine di calcolare la forma corretta. 
 
-#### IMRT - Ad intensità modulata
+### IMRT - Ad intensità modulata
 E' una estensione della 3D CRT ma utilizza fasci di radiazioni non uniformi, modulati e calcolati attraverso l'uso di opportuni algoritmi di ottimizzazione per il calcolo inverso della dose assorbita dal paziente. 
 La IMRT fa sì che venga modulata la potenza radiante dal fascio e quindi che ci sia più intensità al centro e meno ai bordi a seconda della forma del tumore, si fa attraverso delle lamelle del collimatore, le quali non sono lamelle fisse ma sono mobili e possono basarsi su una tecnica chiamata  *step-and-shoot*. Ricorrendo all'uso di IMRT si riesce a minimizzare tantissimo gli effetti in uscita del fascio, evitando di colpire organi e tessuti sani posti dietro, o affianco, la massa tumorale da irradiare.
 
@@ -78,7 +64,7 @@ Il gantry ruota intorno al paziente durante il rilascio della dose somministrata
 
 **N.B.** La dose assorbita è calcolata mediante la legge di Lambert-Beer: la legge di attenuazione quindi il decadimento della dose assorbita in base alla profondità che si attraversa. 
 
-### Evoluzione della radioterapia: adroterapia
+## Evoluzione della radioterapia: adroterapia
 
 **Ultima frontiera: dai fotoni agli adroni** (protoni ad alta energia accelerati mediante acceleratore circolare e non lineare come per i raggi X). 
 
@@ -113,18 +99,15 @@ L’adroterapia è un tipo di radioterapia che sta prendendo molto piede perche
 
 Mentre la radioterapia è diffusa a livello capillare, praticamente ovunque in tutti i centri del mondo e soprattutto nei paesi industrializzati; l’adroterapia, invece, è un tipo di terapia molto più recente che sta trovando dagli anni 2005 in poi il suo razionale infatti in Europa stanno aumentando i centri di protonterapia e carbonterapia costruiti. In Italia, in particolare, ne abbiamo tre: uno è il centro di adroterapia oncologica a Pavia, un altro è un centro di protoni che si trova a Trento e un altro è un centro di protoni che si trova a Catania che è limitato al trattamento di tumori oculari.
 
-### Obiettivi della radioterapia
 
-Rilascio massimo della dose sul volume target (distretto specifico)
-
-#### Errori tipici della radioterapia
+## Errori tipici della radioterapia
 1. Setup del paziente (tatuaggio ad esempio)
 2. Variazioni morfologiche (il paziente dimagrisce, o ingrassa) - oppure dovute all'ingrossamento o riduzione della massa tumorale
 3. Movimenti di organi (vescica piena o vuota, movimenti causati da respirazione ecc)
 
 Per risolvere completamente gli errori si può solo **aggiungere margini di sicurezza**. 
 
-##### PTV Concept
+## PTV Concept
 - **GTV:** Gross Tumor Volume - è la massa tumorale palpabile, visibile nell'immagine della TAC
 - **CTV:** Clinical Target Volume - comprende anche il GTV ma raggruppa anche alcune porzioni del volume che potrebbero comprendere cellule tumorali che potrebbero non essere state visualizzate nell'immagine del planning pre-operatorio
 - **PTV:** Planning Target Volume - tiene conto di tutti gli errori geometrici ammissibili (movimenti interni ed esterni del paziente, variazioni dei distretti del paziente ecc)
@@ -141,7 +124,7 @@ Quando si tratta un tumore extracranico (un tumore cranico di solito non è sog
 
 Ovviamente, questi margini (sia interni che esterni di setup) non sono sempre applicabili nei casi in cui vicino al tumore c’è un organo considerato di livello di importanza 1 (ad es. il cuore) perché in questo caso si deve cercare limitare al minimo la dose di esposizione di quell’organo e quindi è necessario rivedere i margini di sicurezza sopra descritti. 
 
-#### IGRT - Image Guided Radio Therapy
+## IGRT - Image Guided Radio Therapy
 
 Feedback ad anello chiuso che mi permette di sistemare la forma del mio fascio energetico con le immagini cliniche ottenute. 
 
@@ -151,18 +134,4 @@ Per fare ciò, è possibile integrare il feedback di controllo tramite sensori a
 L'idea di fondo è quella di monitorare la superficie corporea del paziente per determinare gli spostamenti ed eventuali variazioni di volume causati da movimenti, respirazioni, ingrossamento della vescica ecc. 
 (Un pò come il vision tracking, contollo optoelettronico)
 
-ELEKTRA E BARIAN SONO I PRIMI PRODUTTORI DI DISPOSITIVI PER RADIOTERAPIA. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ELEKTRA E BARIAN SONO I PRIMI PRODUTTORI DI DISPOSITIVI PER RADIOTERAPIA.

@@ -5,7 +5,7 @@ showToc: false
 # Benvenuto nel mio garden! 🌱
 <div className="relative w-full mb-10 lg:mb-0 md:text-center lg:text-left">
             <p className="mt-4 text-3xl text-primary dark:text-primary-dark tracking-tight">
-              In questo <i>"giardino"</i> troverai una raccolta di <i>ricerche</i>, <i>appunti</i> e <i>progetti</i> in ordine sparso. Alcuni fiori saranno appassiti e lasciati lì, altri saranno splendenti e in continuo aggionramento.<br/>
+              In questo <i>"giardino"</i> troverai una raccolta di <a href="/blog"><i>articoli</i></a>, <a href="/learning"><i>appunti</i></a> e <a href="/progetti"><i>progetti</i></a> in ordine sparso. Alcuni fiori saranno appassiti e lasciati lì, altri saranno splendenti e in continuo aggiornamento.<br/>
               <br/><i>Buona esplorazione</i> 😁
             </p>
             </div>

@@ -1,14 +1,10 @@
-#UMG 
+---
+title: Riconoscimento di features nelle immagini
+description: Corner e features detection, Harris Detector e HOG descriptor 
+date: 2023-03-23
 
-**Lezione precedente:**[[EICA 10]]
-
-- [[#Image features|Image features]]
-	- [[#Image features#Corner detection|Corner detection]]
-	- [[#Image features#Feature detection|Feature detection]]
-		- [[#Feature detection#HOG Descriptor|HOG Descriptor]]
-
-
-## Image features
+--- 
+# Image features
 Cosa si intende per *caratteristiche* o *features* di un'immagine?
 Una feature in un'immagine è un elemento di un'immagine A che posso riconoscere facilmente in un'immagine B. 
 
@@ -21,7 +17,7 @@ Le features delle immagini vengono largamente impiegate per:
 - Ottenere ricostruzioni di volumi 3D a partire da angolature diverse (fotogrammetria)
 - Classificazione per task di *data mining* et similia
 
-### Corner detection
+## Corner detection
 Il rilevamento degli angoli è un approccio utilizzato nei sistemi di *computer vision* per estrarre alcuni tipi di caratteristiche e dedurre il contenuto di un'immagine. 
 
 Il rilevamento degli angoli è spesso utilizzato per il rilevamento del movimento, la registrazione delle immagini, il tracciamento video, la mosaicatura delle immagini, lo stitching di panorami, la ricostruzione 3D e il riconoscimento degli oggetti. Il rilevamento degli angoli si sovrappone all'argomento del rilevamento dei punti di interesse.
@@ -34,16 +30,16 @@ Un punto di interesse è un punto in un'immagine che ha una posizione ben defini
 *Quindi cosa si fa per trovare queste feature per poi eventualmente fare una scrematura e lasciare la feature che ci interessa?*
 Si vanno a definire tante regioni di interesse (ROI) e si calcola localmente il gradiente al variare della posizione della ROI di interese.
 
-### Feature detection
+## Feature detection
 L’obiettivo degli algoritmi basati su *feature detection* è quello di individuare feature considerate “rilevanti” in un'immagine. Esistono diversi metodi per l'implementazione della feature detection, ma alla base di tutte le metologie vi è la localizzazione dei “*punti chiave*” (*keypoint*). 
 I metodi di *feature detection* più conosciuti sono: 
 - Hessian detector (poco usato)
 - Harris detector
 
-**Hessian detection**
+### Hessian detection
 Nell’Hessian detector si calcola la derivata seconda (quindi la matrice hessiana) dell’immagine nelle due direzioni ortogonali $(x,y)$ e si cercano i punti dove il determinante della matrice è massimo. 
 
-**Harris detector**
+### Harris detector
 Nell’Harris detector il metodo è un po’ più sofisticato. Ci concentriamo di più su questo perché è quello più utilizzato e si trova alla base di più algoritmi che implementano feature detection.
 
 Gli angoli sono regioni dell'immagine con grandi variazioni di intensità in tutte le direzioni. Un primo tentativo di trovare questi angoli è stato fatto da *Chris Harris* e *Mike Stephens* nel loro articolo *A Combined Corner and Edge Detector del 1988*, oggi chiamato **Harris Corner Detector**. L'autore ha trasformato questa semplice idea in una forma matematica. In pratica, trova la differenza di intensità per uno spostamento di (u,v) in tutte le direzioni. L'espressione matematica è la seguente:
@@ -115,10 +111,5 @@ Si è visto che in generale abbiamo bisogno di un kernel per individuare queste 
 *Cosa succede se le immagini hanno una scala diversa, una dimensione diversa?*
 Bisogna cercare un modo per tenere conto di questa scalatura e in questo ambito ci sono algoritmi che si chiamano Scale Invariant Feature detection (rilevamento di feature invarianti rispetto alla scala dell’immagine).
 
-#### HOG Descriptor
+### HOG Descriptor
 L'Istogramma di gradienti orientati (in inglese: **Histogram of Oriented Gradients** e in sigla: **HOG**) è un descrittore di caratteristiche usate in computer vision ed in elaborazione delle immagini per il riconoscimento di oggetti. La tecnica conta le occorrenze dell'orientamento del gradiente in porzioni localizzate di una immagine. Questo metodo è simile al descrittore agli istogrammi orientati al contorno, ai descrittori SIFT e agli shape context ma differisce poiché è calcolato su una griglia densa di celle spaziate uniformi e usa la normalizzazione del contrasto locale sovrapposta per migliorare l'accuratezza. I primi a descrivere l'Istogramma di gradienti orientati nel giugno 2005 furono Navneet Dalal e Bill Triggs, ricercatori del Istituto Nazionale di Ricerca francese (INRIA) mentre studiavano il problema del rilevamento di pedoni in immagini statiche.
-
-
-
-**Lezione successiva:** [[EICA 11]]
-

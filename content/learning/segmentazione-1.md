@@ -1,24 +1,10 @@
-#UMG 
+---
+title: Segmentazione di immagini cliniche (parte 1)
+description: Applicazioni, tecniche e metodologie per la segmentazine di immagini 2D
+date: 2023-03-29
 
-**Lezione precedente:**[[EICA 8]]
-
-- [[#Lezione 9 - Segmentazione I|Lezione 9 - Segmentazione I]]
-- [[#Metodi di sogliatura:|Metodi di sogliatura:]]
-	- [[#Metodi di sogliatura:#Thresholding|Thresholding]]
-		- [[#Thresholding#Fixed thresholding|Fixed thresholding]]
-		- [[#Thresholding#Global / Isodata thresholding|Global / Isodata thresholding]]
-		- [[#Thresholding#Metodo di Otsu|Metodo di Otsu]]
-		- [[#Thresholding#Adaptive thresholding|Adaptive thresholding]]
-	- [[#Metodi di sogliatura:#Edge-based segmentation  or Edge detection|Edge-based segmentation  or Edge detection]]
-	- [[#Metodi di sogliatura:#Filtro di Sobel|Filtro di Sobel]]
-	- [[#Metodi di sogliatura:#Filtro di Prewitt|Filtro di Prewitt]]
-	- [[#Metodi di sogliatura:#Operatore di Roberts Cross|Operatore di Roberts Cross]]
-	- [[#Metodi di sogliatura:#Filtro di Canny|Filtro di Canny]]
-
-**Lezione successiva:** [[EICA 10]]
-
-
-## Lezione 9 - Segmentazione I
+--- 
+# Segmentazione I
 
 Il processo di segmentazione consiste nell'identificazione di regioni di interesse mediante tecniche computazionali e algoritmi di computer vision. Generalmente si effettua una classificazione dei pixel o voxel in base alle caratteristiche dell'immagine stessa (anatomia, funzionalità, metabolismo ecc). Il prodotto finale che si trova in output alla fine del *processo di segmentazione* sono: 
 - contorni
@@ -54,27 +40,27 @@ Da un'immagine a livelli di grigio, la *thresholding* restituisce un'immagine bi
 Il *parametro chiave* in una *threshold* è la scelta del cosiddetto ***valore di soglia***. Esistono diverse metodologie per la scelta automatica di questo valore, oppure è possibile sceglierlo manualmente a seconda delle necessità ed esigenze applicative.
 
 
-#### Fixed thresholding
+### Fixed thresholding
 È basata sull'analisi visiva dell'istogramma: se l'immagine è ben contrastata posso scegliere come soglia il punto centrale dei livelli di grigio. In questo caso è possibile individuare anche più di un livello di soglia. 
 
 Questa logica può funzionare bene in un'immagine senza alcun tipo di rumore, altrimenti bisogna optare per soluzioni più sofisticate e risolutive. 
 
-#### Global / Isodata thresholding
+### Global / Isodata thresholding
 Si seleziona una soglia $T_0$ a metà istogramma (*media dell'istogramma*) e si segmenta l'immagine in base a tale soglia. 
 
-#### Metodo di Otsu
+### Metodo di Otsu
 Il metodo Otsu è un metodo di sogliatura automatica dell'istogramma nelle immagini digitali.
 
 L'algoritmo presume che nell'immagine da sogliare siano presenti due sole classi e quindi calcola la soglia ottima per separare queste due classi minimizzando la varianza intra classe.
 
 È un metodo di ottimizzazione per la sogliatura delle immagini e fornisce in output un'immagine binaria. 
 
-#### Adaptive thresholding
+### Adaptive thresholding
 L'adaptive thresholding è un metodo locale che partiziona l'immagine in più *settori* e si applica un metodo "a soglia" calcolando dunque una soglia diversa per ciascun settore individuato nell'immagine. Un approccio di questo genere risolverebbe la dipendenza dalla luminosità dell'immagine ma provoca comunque una dipendenza dal rumore di fondo dell'immagine in analisi. 
 
 Per ottimizzare il processo di soglia di un'immagine clinica in presenza di forte rumore, è possibile utilizzare le tecniche di smoothing iterativo. In questo modo si ottengono immagini binarie ben suddivise e contrastate in relazione ai bordi e contorni presenti al suo interno. 
 
-### Edge-based segmentation  or Edge detection
+## Edge-based segmentation  or Edge detection
 Nella segmentazione basata sui bordi, i confini o i bordi delle immagini sono significativamente diversi l'uno dall'altro e anche dallo sfondo dell'immagine. Questo fatto viene utilizzato per eseguire il rilevamento dei bordi su immagini con diversi livelli di intensità e discontinuità sui bordi.
 
 Lo scopo degli operatori di **edge segmentation** è generare un'immagine di bordi (**edge image**): una immagine in cui il livello di grigio di ogni punto è proporzionale alla discontinuità tra livelli di grigio presenti in quel punto.
@@ -143,5 +129,3 @@ L’approccio prevede le seguenti fasi:
 Grazie all'isteresi, il risultato ottenuto presenta molte meno linee spezzate rispetto ai metodi di sogliatura singola: può capitare che pixel non siano marcati come edge perchè il valore della loro derivata prima è di poco minore rispetto alla soglia, per cui anche se fanno parte dei bordi di un oggetto non appariranno nel risultato finale.
 
 Sebbene siano passati 26 anni, questa procedura è tutt'oggi utilizzata per la ricerca di punti di edge all'interno di un'immagine. Nella libreria **OpenCV** l'*algoritmo di Canny* è implementato all'interno della funzione cvCanny().
-
-

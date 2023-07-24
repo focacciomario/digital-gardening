@@ -1,25 +1,12 @@
-#UMG 
+---
+title: Segmentazione di immagini cliniche (parte 2)
+description: Metriche di valutazione della segmentazione e ATLAS based segmentation
+date: 2023-03-31
 
-**Lezione precedente:**[[EICA 9]]
+--- 
+# Segmentazione II
 
-- [[#Lezione 10 - Segmentazione II|Lezione 10 - Segmentazione II]]
-	- [[#Lezione 10 - Segmentazione II#Filtri morfologici applicati alle immagini|Filtri morfologici applicati alle immagini]]
-		- [[#Filtri morfologici applicati alle immagini#Dilatazione|Dilatazione]]
-		- [[#Filtri morfologici applicati alle immagini#Erosione|Erosione]]
-		- [[#Filtri morfologici applicati alle immagini#Opening|Opening]]
-		- [[#Filtri morfologici applicati alle immagini#Closing|Closing]]
-			- [[#Closing#Pill Holes Plastimatch|Pill Holes Plastimatch]]
-- [[#Metriche di validazione della segmentazione|Metriche di validazione della segmentazione]]
-		- [[#Filtri morfologici applicati alle immagini#Coefficiente di DICE|Coefficiente di DICE]]
-	- [[#Metriche di validazione della segmentazione#ATLAS based segmentation|ATLAS based segmentation]]
-		- [[#ATLAS based segmentation#Multi-ATLAS based segmentation|Multi-ATLAS based segmentation]]
-
-
-**Lezione successiva: ** [[EICA 11]]
-
-## Lezione 10 - Segmentazione II
-
-### Filtri morfologici applicati alle immagini
+## Filtri morfologici applicati alle immagini
 Nell’ambito dell’image processing il termine morfologia matematica denota lo studio della struttura geometrica dell’immagine.E’ uno strumento utile per la rappresentazione e la descrizione della forma di una regione. Si possono ricavare i contorni, lo scheletro, ecc.
 
 E’ uno strumento matematico definito inizialmente su immagini binarie ma facilmente estensibile ad immagini a toni di grigio e quindi a colori.
@@ -39,28 +26,28 @@ La struttura dell’immagine viene “sondata” con un insieme di forma definib
 
 che combinati con diversi elementi strutturanti B trasformano un “oggetto” A in vario modo. **Erosione** e **Dilatazione** sono gli operatori elementari. Operatori più complessi sono definiti come combinazioni di questi ultimi.
 
-#### Dilatazione
+### Dilatazione
 L’effetto dilatazione è dovuto all’applicazione dell’elemento strutturante B vicino ai bordi.Dalla definizione si evince che l’elemento strutturale viene
 ribaltato rispetto alla sua origine, attraverso l’operazione di riflessione, e shiftato di z posizioni attraverso una traslazione. Il risultato dell’operatore è l’insieme delle posizioni z tali che B interseca almeno un elemento di A.
 Nel caso di *dilatazione* più è grande il kernel, maggiore sarà l'effetto di dilatazione ottenuto per l'immagine binaria. 
 
-#### Erosione
+### Erosione
 *Erode/Assottiglia gli oggetti*
 L’effetto di erosione è dovuto al fatto che quando l’elemento strutturante B viene traslato vicino ai bordi, esso non è completamente contenuto in A.
 Erosione e dilatazione sono molto sensibili alla dimensione del kernel e anche dal tipo e dalla forma geometrica dell'elemento strutturante che stiamo considerando. 
 
-#### Opening
+### Opening
 L'algoritmo di opening è un'erosione seguita da una dilatazione utilizzando lo stesso elemento strutturale. L’effetto dell’opening è di preservare il più possibile regioni di forma simile all’elemento strutturante, e di eliminare quelle differenti. E’ un filtro di smoothing, di cui potenza e tipologia vengono determinati dalla forma e dalle dimensioni dell'elemento strutturante B. 
 Un esempio di problema che richiede l’applicazione dell’apertura (*opening*) è l’eliminazione delle linee dall’immagine in figura. In questo caso viene utilizzato un elemento strutturale a forma sferica di raggio pari a quello dei cerchi da preservare, che è maggiore dello spessore delle linee da eliminare.
 
 ![[Pasted image 20230611125710.png]]
 
-#### Closing
+### Closing
 Consiste in una operazione di dilatazione seguita da un erosione utilizzando lo stesso elemento strutturale. L’effetto del closing è di chiudere gli eventuali buchi interni. 
 
 ![[Pasted image 20230611125905.png]]
 
-##### Pill Holes Plastimatch
+### Pill Holes Plastimatch
 All'interno di Plastimatch troviamo una funzione denominata "*pill holes*" e serve proprio a chiudere delle regioni che presentano dei fori all'interno degli elementi segmentati. 
 
 ## Metriche di validazione della segmentazione
@@ -85,7 +72,7 @@ Condizione necessaria ma non sufficiente affinché due segmentazioni siano corri
 
 Un'altra metrica spesso utilizzata coinvolge le superfici del volume in analisi: si calcola la distanza tra il *ground truth* e l'oggetto contornato, segmentando le distanze. Esistono diverse distanza che si possono considerare, come la distanza euclidea fra i punti della superficie. 
 
-#### Coefficiente di DICE
+### Coefficiente di DICE
 Con DICE si definiscono quelli che sono i veri negativi (TN),  veri positivi (TP), falsi negativi (FN) e i falsi positivi (FP).
 
 Stabiliti i TN, TP, FP, FN, il coeff. Di DICE non è altro che un numero compreso nell'intervallo 0-1, indicando con 1 una segmentazione perfetta e con 0 una segmentazione totalmente sbagliata. 
@@ -96,7 +83,7 @@ questo contornamento manuale sia effettuato da più operatori che vengono defini
 
 Possiamo anche misurare la bontà di questi insieme di contornamenti degli operatori manuali attraverso la deviazione standard; se ho una deviazione bassa tra i vari contornamenti posso dire che c'è un basso errore inter-rater cioè che i contorni differiscono di poco. La deviazione standard può essere utilizzata anche per misurare l'errore quando non sono disponibili più operatori, allora un altro modo per ovviare all'errore sistematico è quello di chiedere allo stesso RATER di eseguire il contornamento più volte in giorni diversi in tempi diversi in maniera tale che si possa mitigare un minimo quello che può essere l'errore sistematico. 
 
-### ATLAS based segmentation
+## ATLAS based segmentation
 L’Atlas Based Segmentation è un altro metodo di segmentazione delle immagini cliniche.
 Si utilizza un atlante che può essere un atlante deterministico o probabilistico; dove vengono segmentate le strutture. 
 L'atlante in sostanza consta di due parti: 
@@ -108,7 +95,7 @@ Durante le lezioni abbiamo visto la funzione `warp` in `Plastimatch`.
 
 Qualora il paziente dovesse essere estremamente *dissimile* rispetto l'atlante (ATLAS) di riferimento: allora la segmentazione basata su atlanti potrebbe causare diverse problematiche. 
 
-#### Multi-ATLAS based segmentation
+### Multi-ATLAS based segmentation
 Nella multi-atlas based segmentation si "consultano" diversi atlanti (quindi tanti soggetti diversi fra loro). In questo caso, è come avere tanti votanti o *raters* per il contornamento: 
 - Si effettua la registrazione del query subject sui diversi atlas
 - Ciascun ATLAS produrrà un risultato diverso rispetto il precedente (ogni atlas è differente)
@@ -118,5 +105,4 @@ Nella multi-atlas based segmentation si "consultano" diversi atlanti (quindi tan
 Nell'utilizzo della **Multi-ATLAS segmentation** si ha un problema relativo la complessità computazionale ed il tempo di esecuzione del processo di segmentazione. Avere tanti ATLAS significa effettuare diverse consultazioni, svariati contornamenti, diversi warping e infine un'operazione di voting. 
 
 *Quanti ATLAS conviene utilizzare?*
-Consultare più di 10 atlanti spesso non ha senso, e non produce risultati soddisfacenti, perché speso l'informazione finale non è migliore in relazione al tempo impiegato. 
-
+Consultare più di 10 atlanti spesso non ha senso, e non produce risultati soddisfacenti, perché speso l'informazione finale non è migliore in relazione al tempo impiegato.

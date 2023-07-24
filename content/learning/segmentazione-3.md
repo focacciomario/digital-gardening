@@ -1,15 +1,10 @@
-#UMG 
+---
+title: Segmentazione di immagini cliniche (parte 3)
+description: Il machine learning applicato alla segmentazione di immagini in ambito clinico
+date: 2023-04-10
 
-**Lezione precedente:**[[EICA 11]]
-
-- [[#Segmentazione III|Segmentazione III]]
-	- [[#Segmentazione III#Clustering (Unsupervised ML)|Clustering (Unsupervised ML)]]
-	- [[#Segmentazione III#K-Means|K-Means]]
-	- [[#Segmentazione III#Mixture models|Mixture models]]
-	- [[#Segmentazione III#Expectation maximization|Expectation maximization]]
-	- [[#Segmentazione III#Gaussian mixture model|Gaussian mixture model]]
-
-## Segmentazione III
+--- 
+# Segmentazione III
 
 Ultima lezione inerente la Segmentazione, quest’oggi parleremo di approcci con Machine Learning e Deep Learning. 
 
@@ -19,7 +14,7 @@ Per quanto riguarda il **machine learning applicato alla segmentazione** vedremo
 
 Esistono diverse tipologie di ML non supervisionato che si possono applicare ma fra queste sicuramente dobbiamo citare il **clustering**. 
 
-### Clustering (Unsupervised ML)
+## Clustering (Unsupervised ML)
 In generale, un metodo di *clustering* (raggruppamento) ha come obiettivo quello di creare un gruppo di popolazione (quindi di estrarre un gruppo da una popolazione) in base a delle caratteristiche specifiche della popolazione, quindi in base a delle features. Queste ultime possono essere features di immagini (estrazione di feature dalle immagini) oppure possono essere delle features che caratterizzano la popolazione secondo altri criteri (età, altezza...).
 
 **N.B.** non necessariamente i metodi di clustering sono utilizzati per la segmentazione ma sono utilizzabili in diversi campi applicativi. 
@@ -81,8 +76,3 @@ Quindi in questo caso lavoriamo con un volume tridimensionale:
 
 Quindi per ogni paziente avremo una acquisizione RM in T1 dal quale posso estrarre la materia bianca poi abbiamo una acquisizione pesata in diffusione da cui estraggo il DTI e
 quindi la direzione delle fibre e infine ho un atlante probabilistico dal quale evidenzio la regione di interesse. Ovviamente devo registrare ogni atlante su ogni paziente per individuare in maniera specifica questa regione di interesse.
-
-
-
-**Lezione successiva:** [[EICA 13]]
-
