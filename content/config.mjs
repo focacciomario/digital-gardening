@@ -6,14 +6,14 @@ const config = {
     },
     // title will be displayed on the top of your site
     title: "Mario Focaccio - Digital Garden",
-    logo:"../_flowershow/theme-button.svg",
+    logo:"../logo.svg",
     // adding a description helps with SEO
     description: "Digital garden di Mario Focaccio. Una raccolta di appunti, note e idee.",
     // author of site displayed on the bottom of your site
     author: " Mario Focaccio",
     defaultAuthor: "Mario Focaccio",
     // logo image
-    authorLogo: "../_flowershow/theme-button.svg",
+    authorLogo: "../logo.svg",
     
     // url to author website
     domain: "https://mariofocaccio.it",
@@ -30,8 +30,8 @@ const config = {
                { href:"/contatti", name: "Contatti"},
             ],
     navbarTitle: {
-      logo: "../_flowershow/theme-button.svg",
-      text: "Mario Focaccio",
+      logo: "../logo.svg",
+      text: " ",
       version: "Alpha",
     },
     showToc: true,
