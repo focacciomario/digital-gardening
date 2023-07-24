@@ -1,17 +1,10 @@
-#UMG 
+---
+title: Imaging pre e intra-operatorio
+description: Cosa è possibile pianificare con le immagini cliniche? 
+date: 2023-03-24
 
-**Lezione precedente:** [[EICA 3]]
-
-- [[#Lezione 4 - Imaging pre ed intra operatorio|Lezione 4 - Imaging pre ed intra operatorio]]
-	- [[#Lezione 4 - Imaging pre ed intra operatorio#Cosa è possibile pianificare con l'imaging pre-operatorio?|Cosa è possibile pianificare con l'imaging pre-operatorio?]]
-		- [[#Cosa è possibile pianificare con l'imaging pre-operatorio?#Nota Bene|Nota Bene]]
-	- [[#Lezione 4 - Imaging pre ed intra operatorio#Formato delle immagini mediche|Formato delle immagini mediche]]
-			- [[#Nota Bene#DICOM|DICOM]]
-			- [[#Nota Bene#NIFTI|NIFTI]]
-			- [[#Nota Bene#ALTRI FORMATI|ALTRI FORMATI]]
-
-
-## Lezione 4 - Imaging pre ed intra operatorio
+--- 
+# Imaging pre ed intra operatorio
 
 L'imaging pre-operatorio è da considerarsi tecnologicamente identico a quello diagnostico. Spesso le immagini diagnostiche vengono utilizzate per il *planning operatorio*. 
 
@@ -26,7 +19,7 @@ Esempi di sistemi di immobilizzazione possono essere:
 - Dispositivi di immobilizzazione toracica per la riduzione dei movimenti diaframmatici
 - Dispositivi di immobilizzazione degli arti inferiori o superiori
 
-### Cosa è possibile pianificare con l'imaging pre-operatorio? 
+## Cosa è possibile pianificare con l'imaging pre-operatorio? 
 
 1. Grazie alle acquisizioni di immagini pre-operatorie è possibile identificare la zona target ed eventuali organi a rischio;
 2. Sulle immagini acquisite è possibile effettuare delle misurazioni (lineari, aree, volumi) che possono essere utili per determinare le dimensioni di una protesi, piuttosto che le distanze fra distretti specifici; 
@@ -46,9 +39,9 @@ Uno dei primi approcci utilizzati come sistemi di riferimento è stato l'**N-bar
 
 ![[Pasted image 20230515115424.png]]
 
-### Formato delle immagini mediche
+## Formato delle immagini mediche
 
-##### DICOM
+### DICOM
 Il formato standard di registrazione delle immagini biomediche (provenienti dagli studi di CT, MRI, PET ecc.) è denominato **DICOM**.
 È stato sviluppato dalla National Electrical Manufacturers Association (NEMA) in collaborazione con l’American College of Radiology (ACR).
 Il formato *DICOM* specifica gli standard di comunicazione tra le apparecchiature dedicate al trattamento delle bioimmagini: 
@@ -70,7 +63,7 @@ In genere si hanno:
 Il sistema DICOM ci fornisce informazioni spaziali circa l'acquisizione effettuata: 
 è possibile infatti eseguire una trasformazione delle coordinate da pixel a mm (utile ad esempio nella misurazione di distanze lineari tra un edge di un distretto ed un altro ad esempio).
 
-##### NIFTI
+### NIFTI
 Anche se le immagini mediche sono tutte acquisite utilizzando lo standard DICOM, gli operatori del settore talvolta possono trovarsi davanti alcuni software (FSL, SPM5, MRIcron ecc.) che usano come formato immagine il **NIFTI**.
 
 *NIFTI* è l'acronimo di **NeuroImaging Informatics Technology Initiative** e l'obiettivo è quello di proporre un formato (non standard) dedicato al mondo della neuroimaging. 
@@ -81,7 +74,7 @@ Diversi software open source consentono di effettuare una conversione da DICOM a
 
 Come nel DICOM, anche il NIFTI include al suo interno un HEADER e i dati di immagine: tutto contenuto in un unico file la cui estensione è *.nii* (NIFTI) oppure in due file separati le cui estensioni sono *.hdr* e *.img*
 
-##### ALTRI FORMATI
+### ALTRI FORMATI
 Altri formati utilizzati nell'ambito dell'imaging biomedico possono essere:
 - **NRRD**: Nearly Raw Raster Data
 - **MHA, MHD**: Metaimage format (ITK)

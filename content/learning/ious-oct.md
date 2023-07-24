@@ -1,15 +1,10 @@
-#UMG 
+---
+title: IOUS e OCT
+description: Brevi cenni all'Intraoperative Ultrasound (IOUS) e Optical Coherence Tomography (OCT)
+date: 2023-03-26
 
-**Lezione precedente:**[[EICA 5]]
-
-## Lezione 6 - Intraoperative Ultrasound (IOUS) e Optical Coherence Tomography (OCT)
-
-- [[#Misure indirette:|Misure indirette:]]
-		- [[#Doppler e Color Doppler|Doppler e Color Doppler]]
-		- [[#Elastography|Elastography]]
-- [[#Applicazioni dell'imaging IOUS|Applicazioni dell'imaging IOUS]]
-- [[#Applicazioni dell'imaging OCT|Applicazioni dell'imaging OCT]]
-
+--- 
+# Intraoperative Ultrasound (IOUS) e Optical Coherence Tomography (OCT)
 
 Con il termine *ultrasuoni* ci si riferisce alle onde meccaniche appartenenti alla frequenza degli ultrasuoni che vengono prodotte da un array di trasduttori piezoelettrici ed in grado di diffondersi attraverso i tessuti del corpo umano. 
 Queste onde, interagendo con i tessuti, vengono parzialmente riflesse. L'eco di ritorno viene quindi letto dallo stesso trasduttore emettitore, fornendo una stima della profondità di ogni tessuto che riflette il fronte d'onda. 
@@ -43,16 +38,16 @@ $$v= \frac{f_{d} \times c }{2f_{v}\times \cos \alpha}$$
 
 dove $f_{v}=$ Frequenza d'onda incidente, $c$ = velocità di propagazione del suono nel tessuto umano, $v=$ velocità di bersaglio, $a=$ angolo di incidenza del fascio ultrasonoro con il bersaglio. 
 
-### Misure indirette: 
+## Misure indirette: 
 
-##### Doppler e Color Doppler
+### Doppler e Color Doppler
 Sono presenti informazioni relative alla presenza/assenza di flusso, direzione e velocità. E' possibile anche che il macchinario emetta un segnale udibile per simulare il suono del flusso sanguigno. 
 È spesso utilizzata nel caso di: 
 - Stenosi trombosi
 - Dilatazioni aneurismiche
 - Insufficienza valvolare
 
-##### Elastography
+### Elastography
 L'elastografia è l'insieme delle tecniche che consentono di stimare la rigidità dei tessuti come proprietà fisica denominata modulo di Young (E). Il modulo di Young è una costante di proporzionalità che mette in relazione la forza applicata per unità di superficie, o stress, e la conseguente variazione relativa delle dimensioni del tessuto, o deformazione. I metodi di elastografia a ultrasuoni possono essere suddivisi in due categorie: quasi statici, o basati sulla deformazione, e dinamici, o basati sulle onde di taglio.
 
 La natura dello stimolo meccanico esterno definisce questi metodi. Nell'elastografia basata sulla deformazione, la forza viene applicata mediante l'applicazione della pressione della sonda o attraverso la forza meccanica endogena (ad esempio, la pulsazione carotidea). Nell'elastografia basata sulle onde di taglio, un'onda di taglio del tessuto viene indotta dal sistema di imaging. In entrambi gli approcci, la risposta del tessuto a questi stimoli meccanici viene utilizzata per stimare le proprietà meccaniche del tessuto. 
@@ -64,16 +59,16 @@ In un materiale elastico, la deformazione è proporzionale allo sforzo applicato
 
 **Settori in cui si sfrutta il principio dell'elastografia:**
 
-Neuro ✅ (Brain shift durante l'operazione di neuro)
-Oftamologia ✅
-Otorinolaringoiatria ✅
-Mammella ✅
-Cardiotoracico ed endovascolare ✅
-Addominale ✅
-Pelvico ✅
-Ortopedico  ✅
+- Neuro ✅ (Brain shift durante l'operazione di neuro)
+- Oftamologia ✅
+- Otorinolaringoiatria ✅
+- Mammella ✅
+- Cardiotoracico ed endovascolare ✅
+- Addominale ✅
+- Pelvico ✅
+- Ortopedico  ✅
 
-### Applicazioni dell'imaging IOUS
+## Applicazioni dell'imaging IOUS
 
 Nel caso si stia operando mediante **Biopsia**, l'utilizzo combinato di un navigatore intraoperatorio con le immagini US consente in maniera più agevole: 
 - La visualizzazione dell'ago all'interno del paziente
@@ -86,7 +81,7 @@ Anche nel caso di **applicazione di cateteri** è possibile utilizzare le immagi
 È possibile utilizzare IOUS anche nel caso di operazioni intracardiache (ICE - Intracardiac Echocardiography) e intravascolari (IVUS - Intravascular Ultrasound). 
 
 
-### Applicazioni dell'imaging OCT
+## Applicazioni dell'imaging OCT
 
 In fisica l'interferometria è un metodo di misura che sfrutta le interferenze fra più onde coerenti fra di loro. 
 Un fascio di luce viene inviato su uno specchio semiriflettente che divide il fascio a metà: 
@@ -110,9 +105,6 @@ A differenza degli US, i principali siti applicativi sono relativamente pochi:
 - Pelvico
 - Ortopedico
 
-Come per gli US e con lo stesso principio è possibile ricavare misure indirette di velocità ed elasticità dei tessuti
+Come per gli US e con lo stesso principio è possibile ricavare misure indirette di velocità ed elasticità dei tessuti.
 
 In più è possibile estrarre informazioni sulla citoarchitettura dei tessuti.
-
-**Lezione successiva:** [[EICA 7]]
-

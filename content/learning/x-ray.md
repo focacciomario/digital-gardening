@@ -1,21 +1,10 @@
-#UMG 
-
-**Lezione precedente:**[[EICA 4]]
-
-
-## Lezione 5 - X-RAY
-
-- [[#Imaging a raggi X: fluoroscopia, C-Armt, iCT|Imaging a raggi X: fluoroscopia, C-Armt, iCT]]
-	- [[#Imaging a raggi X: fluoroscopia, C-Armt, iCT#L'intensificatore di brillanza|L'intensificatore di brillanza]]
-		- [[#L'intensificatore di brillanza#C-Arm|C-Arm]]
-	- [[#Imaging a raggi X: fluoroscopia, C-Armt, iCT#DPI|DPI]]
-
-
-
-### Imaging a raggi X: fluoroscopia, C-Armt, iCT
-
+---
+title: X-Ray 
+description: Brevi cenni ai raggi X
+date: 2023-03-25
+--- 
+# Imaging a raggi X: fluoroscopia, C-Armt, iCT
 Queste onde elettromagnetiche utilizzate per l'imaging clinico, rientrano nella banda di energia dei cosiddetti raggi X. Hanno la capacità di interagire con i tessuti con cui entrano in contatto: trasmissione, assorbimento e diffusione sono i fenomeni più ricorrenti. 
-
 I raggi X sono costituiti da fotoni, caratterizzati quindi da una lunghezza d'onda $\lambda$ e da una propria energia $E$, secondo la relazione che segue: 
 $$E=h\nu = \frac{hc}{\lambda}$$
 dove $\nu$ è la frequenza dell'onda elettromagnetica, $c$ è la velocità della luce e $h$ è la costante di Planck. I **raggi X** hanno grande importanza nell'immaging clinico per le loro proprietà fisiche: 
@@ -28,7 +17,7 @@ Per ottenere delle immagini dinamiche su una pellicola in passato si ricorreva d
 
 Per ovviare a tali inconvenienti sono state introdotte dapprima le tecniche di **cineangiografia** e successivamente la tecnica di **videoradiografia**. Entrambe furono possibili a seguito dell'invenzione dell'**amplificatore di brillanza, anche detto intensificatore di immagini** che consente di lavorare in regime dinamico con dosi accettabili sia per il paziente che per il tubo radiogeno. 
 
-#### L'intensificatore di brillanza
+### L'intensificatore di brillanza
 
 L'intensificatore di brillanza è un dispositivo ad alto guadagno che aumenta l'efficienza della catena radiologica in cui è inserito a spese di un peggioramento della risoluzione spaziale, presentando la caratteristica di consentire riprese dinamiche di immagini. Esso puà operare modo fluoroscopico sia continuo che pulsato. *E' spesso utilizzato per lo studio dei processi che coinvolgono strutture in modivimento, flussi o riempimento, per controlli durante la chirurgia o per l'inserimento di cannule e cateteri.* E' molto usato anche negli esami che utilizzano MDC. 
 
@@ -44,7 +33,7 @@ Rispetto ad un classico schermo fluorescente si rileva un guadagno di 10.000 vol
 
 Al fine di **ridurre la dose** di fotoni X emessi, si ricorre a generatori di impulsi in modo che il tubo radiogeno è in funzione solo quando effettivamente necessario (non in continua).
 
-##### C-Arm
+### C-Arm
 ![[Pasted image 20230521165455.png]]
 Arco a forma di C (letteralmente dall'inglese C-Arm) è stato introdotto nel 1960. Da una parte vi è la sorgente di RX fissa ad una delle estremità, mentre dall'altra vi è l'intensificatore di brillanza per mostrare le immagini in tempo reale sul display. 
 
@@ -57,7 +46,7 @@ I raggi X prodotti dalla sorgente di RX possono essere regolati nella forma e ne
 Il vantaggio di utilizzare un collimatore è la possibilità di *localizzare il fascio incidente* e diminuire la dose assorbita dal paziente. 
 ***La distanza sorgente paziente deve essere sempre superiore a 38cm per evitare danni ad organi e tessuti.*** 
 
-#### DPI
+### DPI
 - Guanti
 - Occhiali
 - Collare tiroideo in piombo

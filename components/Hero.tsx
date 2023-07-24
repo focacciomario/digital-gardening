@@ -93,56 +93,9 @@ export default function Hero() {
                 please sign up.
               </p>
             </div>
-            <p className="my-10 text-l tracking-wide">
-              <span>A project of</span>
-              <a
-                href="https://lifeitself.us/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/images/life-itself-logo.svg"
-                  alt="Life Itself"
-                  className="mx-2 mb-1 h-6 inline"
-                />
-                <span>Life Itself</span>
-              </a>
-              <a
-                href="https://www.datopian.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/images/datopian_logo.png"
-                  alt="Datopian"
-                  className="mx-2 mb-1 h-6 inline bg-black rounded-full"
-                />
-                <span>Datopian</span>
-              </a>
-            </p>
+            
           </div>
-          <div className="relative">
-            <img
-              src="/assets/images/obsidian_dark_new.png"
-              alt=""
-              className="relative -top-14 w-3/4 rounded-lg hidden dark:block"
-            />
-            <img
-              src="/assets/images/flowershow_dark.png"
-              alt=""
-              className=" absolute top-10 left-1/3 w-3/4 rounded-lg hidden dark:block"
-            />
-            <img
-              src="/assets/images/obsidian_light_new.png"
-              alt=""
-              className="relative -top-14 w-3/4 rounded-lg dark:hidden"
-            />
-            <img
-              src="/assets/images/flowershow_light.png"
-              alt=""
-              className=" absolute top-10 left-1/3 w-3/4 rounded-lg dark:hidden"
-            />
-          </div>
+          
         </div>
       </div>
     </div>

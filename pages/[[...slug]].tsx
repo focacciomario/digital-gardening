@@ -87,6 +87,7 @@ export const getStaticProps: GetStaticProps = async ({
         props: {
             source: JSON.stringify(mdxSource),
             meta: frontMatterWithComputedFields,
+            
             siteMap,
         },
     };

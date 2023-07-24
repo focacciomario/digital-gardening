@@ -18,6 +18,7 @@ import { serialize } from "next-mdx-remote/serialize";
 
 import siteConfig from "../config/siteConfig";
 
+
 /**
  * Parse a markdown or MDX file to an MDX source form + front matter data
  *
@@ -44,7 +45,7 @@ const parse = async function (source, format, scope) {
           [
             remarkToc,
             {
-              heading: "Table of contents",
+              heading: "Contenuti della pagina:",
               tight: true,
             },
           ],
