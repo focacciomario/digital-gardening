@@ -50,8 +50,8 @@ export const getStaticProps: GetStaticProps = async (): Promise<
         
         props: {
             meta: {
-                title: "Learning notes",
-                description: "Una raccolta di note universitarie e non. Personalmente, utilizzo questi testi come riferimento o spunto durante gli studi; mi auguro possano essere utili anche a voi altri.",
+                title: "Notes",
+                description: "Una raccolta di note accademiche (e non). Utilizzerò questi testi come riferimento o spunto durante gli studi; mi auguro possano essere utili anche ad altri.",
                 showSidebar: false,
                 showToc: false,
                 showComments: false,

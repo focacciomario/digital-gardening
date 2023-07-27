@@ -23,11 +23,11 @@ const config = {
       { label: "discord", href: "https://discord.gg/UrsKR9Ps" },
     ],
     // links to the pages you want to link to in the navbar
-    navLinks: [{ href: "/about", name: "About" },
+    navLinks: [{ href:"/about", name: "About"},
+               { href: "/progetti", name: "Progetti" },
+               { href:"/learning", name: "Note"},
                { href: "/blog", name: "Blog" },
-               { href:"/learning", name: "Learning notes"},
-               { href:"/_all", name: "All"},
-               { href:"/contatti", name: "Contatti"},
+               { href:"/_all", name: "Indice"},
             ],
     navbarTitle: {
       logo: "../logo.svg",

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mariofocaccio.it/about</loc>
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/progetti</loc>
+  </url>
+
+  <url>
     <loc>https://mariofocaccio.it/learning/filtri-convoluzione</loc>
   </url>
 
@@ -46,6 +54,10 @@
 
   <url>
     <loc>https://mariofocaccio.it/learning/segmentazione-1</loc>
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/learning/AI/features-immagini</loc>
   </url>
 
   <url>
