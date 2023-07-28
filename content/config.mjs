@@ -38,12 +38,17 @@ const config = {
     showToc: true,
     showSidebar: true,
     nextSeo: {
+      additionalLinkTags: [
+        { rel: 'icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', href: '/icon.png', sizes: '120x120' },
+      ],
       titleTemplate: "%s | Mario Focaccio",
       description:
         "A public collection of my Personal Knowledge Management about coding, AI, Bioengineering, 3D print.",
       canonical: "https://mariofocaccio.it",
       openGraph: {
         title: "Mario Focaccio",
+        locale: 'en_US',
         images: [
           {
             url: "https://flowershow.app/assets/images/frontpage-screenshot.jpg",
