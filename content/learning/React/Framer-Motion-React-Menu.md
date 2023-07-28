@@ -9,7 +9,7 @@ tags:
   - FramerMotion
 ---
 
-This is a full example of a left-side menu with animation using #FramerMotion in #React 
+This is a full example of a left-side menu with animation using #FramerMotion in #React.
 
 ## Create index.js file
 

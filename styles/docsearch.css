@@ -391,7 +391,7 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .DocSearch-NoResults .DocSearch-Screen-Icon {
-  display: none;
+  display: flex !important;
 }
 
 .DocSearch-NoResults .DocSearch-Title {
