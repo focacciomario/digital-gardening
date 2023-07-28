@@ -56,6 +56,9 @@ export const MyComponent = ({ isVisible }) => (
 )
 ```
 
+**Menu example in React**: 
+[[Framer-Motion-React-Menu]]
+
 ### [📚 Docs](https://www.npmjs.com/package/framer-motion#-docs)
 
 - Check out [our documentation](https://www.framer.com/docs/?utm_source=motion-readme-docs) for guides and a full API reference.
