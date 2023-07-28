@@ -1,6 +1,6 @@
 ---
 title: Risorse gratuite per la grafica vettoriale
-description: Descrizione da inserire
+description: Su internet ci sono molte risorse di progettazione gratuite. Ecco alcuni bookmarks da tenere in considerazione nella scelta di risorse grafiche
 date: 2023-07-28
 showToc: true
 showSidebar: true
