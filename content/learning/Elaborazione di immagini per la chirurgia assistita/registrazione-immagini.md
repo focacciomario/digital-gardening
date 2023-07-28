@@ -2,6 +2,8 @@
 title: Il problema della registrazione/fusione di immagini cliniche
 description: Approfondimento di processi e tecniche di registrazione delle immagini e cenni alle metriche di validazione
 date: 2023-03-27
+showSidebar: true
+key: registrazione immagini
 --- 
 # Registrazione di immagini in clinica
 

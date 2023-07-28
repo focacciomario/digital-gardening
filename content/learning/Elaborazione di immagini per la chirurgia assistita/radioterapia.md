@@ -2,7 +2,8 @@
 title: Approfondimento sulla radioterapia, applicazioni e sviluppi
 description: iORT, brachiterapia, radioterapia esterna, pianificazione, adroterapia, IGRT
 date: 2023-04-15
-
+showSidebar: true
+key: radioterapia
 --- 
 
 # Radioterapia

@@ -1,4 +1,18 @@
+import { useState } from "react";
+import { useRouter } from 'next/router'
 export default function Projects() {
+  const [buttonText, setButtonText] = useState(`inviami un'email`);
+  const router = useRouter()
+
+  function handleClick() {
+    if (buttonText != `focacciomario@gmail.com`){
+    setButtonText('focacciomario@gmail.com');
+    }
+    else {
+      router.push('mailto:focacciomario@gmail.com')
+    }
+  }
+
   return (
     <div className="py-10 sm:px-2 lg:relative lg:px-0" id="overview">
       <div className="prose dark:prose-invert mx-auto max-w-6xl px-4 lg:max-w-6xl lg:px-8 xl:px-12">
@@ -8,12 +22,12 @@ export default function Projects() {
         essere una testimonianza delle mie esperienze presenti e passate, ma anche 
         ispirarti per nuove idee e possibili collaborazioni future. 
         Se hai qualche domanda o suggerimento &nbsp;
-        <a href="mailto:hello@growave.it" 
+        <button onClick={handleClick} 
         className=" font-mono
         px-3 py-1 no-underline bg-secondary text-white rounded-full shadow-lg
         transition hover:transition-all ease-in-out delay-150 hover:bg-primary hover:text-secondary">
-          inviami una mail
-        </a>
+          {buttonText}
+        </button>
         </p>
         <div className="not-prose my-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="group relative rounded-xl border border-slate-200 dark:border-slate-800">

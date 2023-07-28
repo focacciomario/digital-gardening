@@ -2,7 +2,8 @@
 title: Imaging pre e intra-operatorio
 description: Cosa è possibile pianificare con le immagini cliniche? 
 date: 2023-03-24
-
+showSidebar: true
+key: imaging
 --- 
 # Imaging pre ed intra operatorio
 

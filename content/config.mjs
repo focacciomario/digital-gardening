@@ -6,7 +6,7 @@ const config = {
     },
     // title will be displayed on the top of your site
     title: "Mario Focaccio - Digital Garden",
-    logo:"../logo.svg",
+    logo:"../../../logo.svg",
     // adding a description helps with SEO
     description: "Digital garden di Mario Focaccio. Una raccolta di appunti, note e idee.",
     // author of site displayed on the bottom of your site

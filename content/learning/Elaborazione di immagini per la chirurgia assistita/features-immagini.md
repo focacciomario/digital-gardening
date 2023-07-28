@@ -2,7 +2,8 @@
 title: Riconoscimento di features nelle immagini
 description: Corner e features detection, Harris Detector e HOG descriptor 
 date: 2023-03-23
-
+showSidebar: true
+key: features
 --- 
 # Image features
 Cosa si intende per *caratteristiche* o *features* di un'immagine?
@@ -49,14 +50,9 @@ $w(x,y)$ rappresenta la *window function*
 $I(x+u,y+v)$ è l'intensità shiftata
 $I(x,y)$ è l'intensità dell'immagine
 
-L'obiettivo è massimizzare la funzione $E(u,v)$ per il rilevamento degli angoli. Ciò significa che dobbiamo massimizzare il secondo termine. Applicando l'espansione di Taylor all'equazione di cui sopra e utilizzando alcuni passaggi matematici, otteniamo l'equazione finale come:
+L'obiettivo è massimizzare la funzione $E(u,v)$ per il rilevamento degli angoli. Ciò significa che dobbiamo massimizzare il secondo termine. 
 
-$$ E(u,v) = \begin{bmatrix}  
-u & v   
-\end{bmatrix} M \begin{bmatrix} u \\ v \end{bmatrix}$$
-dove: 
-$$M = \sum\limits_{x,y}w(x,y) 
-\begin{bmatrix} I_{x}I_{x} & I_{x}I_{y}  \\ I_{x}I_{y}& I_{y}I_{y} \end{bmatrix}$$
+
 Qui, $I_{x}$ e $I_{y}$ sono le derivate dell'immagine nelle direzioni x e y, rispettivamente. 
 (Queste possono essere facilmente trovate usando la funzione `cv.Sobel()`in OpenCV di Python).
 

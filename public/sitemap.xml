@@ -9,19 +9,21 @@
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/filtri-convoluzione</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/imri</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/imaging-intra-pre-operatorio</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/features-immagini</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/features-immagini</loc>
-  </url>
-
-  <url>
-    <loc>https://mariofocaccio.it/learning/registrazione-immagini</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/x-ray</loc
+    >
   </url>
 
   <url>
@@ -29,19 +31,27 @@
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/segmentazione-2</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/filtri-convoluzione</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/x-ray</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/segmentazione-2</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/ious-oct</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/segmentazione-1</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/imri</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/registrazione-immagini</loc
+    >
   </url>
 
   <url>
@@ -49,19 +59,27 @@
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/segmentazione-3</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/radioterapia</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/segmentazione-1</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/imaging-intra-pre-operatorio</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/AI/features-immagini</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/segmentazione-3</loc
+    >
   </url>
 
   <url>
-    <loc>https://mariofocaccio.it/learning/radioterapia</loc>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/ious-oct</loc
+    >
   </url>
 
   <url>
