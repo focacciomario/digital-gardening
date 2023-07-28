@@ -11,6 +11,8 @@ tags:
 
 This is a full example of a left-side menu with animation using #FramerMotion in #React 
 
+## Create index.js file
+
 Assuming that our `index.js` file in `src` folder is in a form like that: 
 
 ```JSX
@@ -40,6 +42,8 @@ rootElement
 ```
 
 It's using `strict mode` [official guide strict mode](https://legacy.reactjs.org/docs/strict-mode.html) only for development purposes
+
+## Create App.js
 
 Let's start creating our `App.jsx` file in React `/src` folder
 
@@ -199,6 +203,8 @@ variants={itemVariants}
 }
 ```
 
+## Give some style.css
+
 Let's give some style to our menu creating a new `styles.css` file in `/src` folder
 
 ```CSS
@@ -282,3 +288,5 @@ background-color: #f9fafb;
 }
 
 ```
+
+Full example code is reported [here](https://codesandbox.io/s/framer-motion-sidebar-finished-x07lz?file=/package.json)

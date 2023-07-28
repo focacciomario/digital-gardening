@@ -9,6 +9,10 @@
   </url>
 
   <url>
+    <loc>https://mariofocaccio.it/learning/Coding/Wordpress-htaccess</loc>
+  </url>
+
+  <url>
     <loc
       >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/imri</loc
     >
@@ -17,6 +21,12 @@
   <url>
     <loc
       >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/features-immagini</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://mariofocaccio.it/learning/React/Install-framerMotion-in-React</loc
     >
   </url>
 
@@ -40,6 +50,10 @@
     <loc
       >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/segmentazione-2</loc
     >
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/learning/React/Framer-Motion-React-Menu</loc>
   </url>
 
   <url>
@@ -88,5 +102,13 @@
 
   <url>
     <loc>https://mariofocaccio.it/learning/Coding/GitHub-Markdown-Syntax</loc>
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/learning/Coding/Mautic-Shortcodes</loc>
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/blog/Tools-per-literature-mapping</loc>
   </url>
 </urlset>
