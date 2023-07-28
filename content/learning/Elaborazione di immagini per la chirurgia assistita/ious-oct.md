@@ -3,7 +3,7 @@ title: IOUS e OCT
 description: Brevi cenni all'Intraoperative Ultrasound (IOUS) e Optical Coherence Tomography (OCT)
 date: 2023-03-26
 showSidebar: true
-key: ultrasound
+tag: EICA
 --- 
 # Intraoperative Ultrasound (IOUS) e Optical Coherence Tomography (OCT)
 

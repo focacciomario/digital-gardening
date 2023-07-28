@@ -3,7 +3,7 @@ title: Segmentazione di immagini cliniche (parte 2)
 description: Metriche di valutazione della segmentazione e ATLAS based segmentation
 date: 2023-03-31
 showSidebar: true
-key: segmentazione
+tag: EICA
 --- 
 # Segmentazione II
 

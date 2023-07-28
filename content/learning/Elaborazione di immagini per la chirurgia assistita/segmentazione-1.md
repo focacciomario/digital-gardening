@@ -3,7 +3,7 @@ title: Segmentazione di immagini cliniche (parte 1)
 description: Applicazioni, tecniche e metodologie per la segmentazine di immagini 2D
 date: 2023-03-29
 showSidebar: true
-key: segmentazione
+tag: EICA
 --- 
 # Segmentazione I
 

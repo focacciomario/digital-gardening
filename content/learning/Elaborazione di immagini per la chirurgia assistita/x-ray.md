@@ -3,7 +3,7 @@ title: X-Ray
 description: Brevi cenni ai raggi X
 date: 2023-03-25
 showSidebar: true
-key: x-ray
+tag: EICA
 --- 
 # Imaging a raggi X: fluoroscopia, C-Armt, iCT
 Queste onde elettromagnetiche utilizzate per l'imaging clinico, rientrano nella banda di energia dei cosiddetti raggi X. Hanno la capacità di interagire con i tessuti con cui entrano in contatto: trasmissione, assorbimento e diffusione sono i fenomeni più ricorrenti. 

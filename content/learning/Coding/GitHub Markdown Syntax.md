@@ -3,9 +3,12 @@ title: GitHub Markdown Syntax
 description: Synthetic guide for .md files in GitHub and not only
 date: 2023-01-10
 showSidebar: true
+tags: 
+  - GitHub
+  - markdown
 ---
 
-<h1 align="center">The Complete Guide of <br> Readme Markdown Syntax</h1>
+<h1 align="center">The Complete Guide of <br/> Readme Markdown Syntax</h1>
 
 #Markdown is a syntax for styling all forms of writing on the #GitHub platform.
 Mostly, it is just regular text with a few non-alphabetic characters thrown in, like ```git # or * ```
@@ -51,13 +54,13 @@ _You **can** combine them_
 ***~~Italic, bold, and strikethrough1~~***	
 ```
 
-*Italics* <br>
-_This will also be italic_<br>
-**Bold Text**<br>
-__This will also be bold__<br>
-***Bold and Italics***<br>
-_You **can** combine them_<br>
-~~Striked Text~~<br>
+*Italics* <br/>
+_This will also be italic_<br/>
+**Bold Text**<br/>
+__This will also be bold__<br/>
+***Bold and Italics***<br/>
+_You **can** combine them_<br/>
+~~Striked Text~~<br/>
 ***~~Italic, bold, and strikethrough1~~***	
 ___
 
@@ -109,13 +112,11 @@ ___
 
 ```git
 * [Link with more info with various formatting options](https://docs.github.com/en/github/writing-on-github "more info")
-* https://www.google.com/
-* <https://www.google.com/>
+
 ```
 
 * [Link with more info with various formatting options](https://docs.github.com/en/github/writing-on-github "more info")
-* https://www.google.com/
-* <https://www.google.com/>
+
 
 ### Link Label 
 ```git
@@ -153,12 +154,12 @@ ___
 ![alt](URL "title")
 ```
 
-- alt in square bracket indicates the replacement text when the image fails to display (can be omitted)
+- alt in square br/acket indicates the replacement text when the image fails to display (can be omitted)
 - parenthesis contains image source
 - title in quotes indicates the text to display when the mouse hovers over the image (can be omitted)
 
 Nite: Dropping the image to the readme file will upload it automatically with this syntax;
-It's the same as links, but add an exlamation mark (!) before opening square bracket;
+It's the same as links, but add an exlamation mark (!) before opening square br/acket;
 Image source can be either a location from the local machine or any valid image URL;
 
 >Example
@@ -170,9 +171,9 @@ Image source can be either a location from the local machine or any valid image 
 
 ### Resize images/Gifs
 ```
-<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
+<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center" />
 ```
-<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
+<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center" />
 
 You can use HTML tags like width="385px", hight="876px", align="center", etc depending what you need. In this case this gif was once uploaded to the repository and the link was taken from there.
 
@@ -182,7 +183,7 @@ Other options to resize:
 ___
 
 ### Linking Image/Gif
-To open another webpage when image is clicked, enclose the Markdown for the image in brackets, and then add the link in parentheses.
+To open another webpage when image is clicked, enclose the Markdown for the image in br/ackets, and then add the link in parentheses.
 
 ```
 [![Octocat](https://user-images.githubusercontent.com/81953271/124010886-b571ca80-d9df-11eb-86ac-b358c48ac6aa.png "GitHub Logo")](https://github.com/)
@@ -297,10 +298,10 @@ p.s.
 ```
 ___
 
-### Break between lines
+### br/eak between lines
 
 ```git
-<br>
+<br/>
 ```
 ___
 
@@ -308,7 +309,7 @@ ___
  
 ```git
 ```git
- * __ <br> etc ```
+ * __ <br/> etc ```
 ```
 ___
 

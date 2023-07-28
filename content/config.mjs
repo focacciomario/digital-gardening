@@ -4,9 +4,10 @@ const config = {
       provider: "kbar",
       
     },
-    // title will be displayed on the top of your site
+    //Title will be displayed on the top of your site
     title: "Mario Focaccio - Digital Garden",
     logo:"../../../logo.svg",
+    
     // adding a description helps with SEO
     description: "Digital garden di Mario Focaccio. Una raccolta di appunti, note e idee.",
     // author of site displayed on the bottom of your site
@@ -30,16 +31,16 @@ const config = {
                { href:"/_all", name: "Indice"},
             ],
     navbarTitle: {
-      logo: "../logo.svg",
+      logo: "../../../logo.svg",
       text: " ",
       version: "Alpha",
     },
     showToc: true,
-    showSidebar: false,
+    showSidebar: true,
     nextSeo: {
       titleTemplate: "%s | Mario Focaccio",
       description:
-        "Digital Gardening open source.",
+        "A public collection of my Personal Knowledge Management about coding, AI, Bioengineering, 3D print.",
       canonical: "https://mariofocaccio.it",
       openGraph: {
         title: "Mario Focaccio",

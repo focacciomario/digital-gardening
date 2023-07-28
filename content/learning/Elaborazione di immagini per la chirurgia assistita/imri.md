@@ -3,7 +3,7 @@ title: iMRI
 description: Strumentazione, sviluppi e applicazioni dell'intraoperative magnetic resonance imaging 
 date: 2023-03-27
 showSidebar: true
-key: MRI
+tag: EICA
 --- 
 # Intraoperative MRI
 

@@ -3,7 +3,7 @@ title: Segmentazione di immagini cliniche (parte 3)
 description: Il machine learning applicato alla segmentazione di immagini in ambito clinico
 date: 2023-04-10
 showSidebar: true
-key: segmentazione
+tag: EICA
 --- 
 # Segmentazione III
 

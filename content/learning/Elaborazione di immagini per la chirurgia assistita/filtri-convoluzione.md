@@ -3,7 +3,7 @@ title: Filtri immagini 2D - FFT e convoluzione 2D
 description: Brevi cenni matematici al filtraggio delle immagini 2D
 date: 2023-03-23
 showSidebar: true
-key: filtri
+tag: EICA
 --- 
 
 

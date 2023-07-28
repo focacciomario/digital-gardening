@@ -3,7 +3,7 @@ title: Riconoscimento di features nelle immagini
 description: Corner e features detection, Harris Detector e HOG descriptor 
 date: 2023-03-23
 showSidebar: true
-key: features
+tag: EICA
 --- 
 # Image features
 Cosa si intende per *caratteristiche* o *features* di un'immagine?
