@@ -21,7 +21,7 @@ const config = {
     analytics: "G-XXXX",
     social: [
       { label: "github", href: "https://github.com/focacciomario" },
-      { label: "discord", href: "https://discord.gg/UrsKR9Ps" },
+      //{ label: "discord", href: "https://discord.gg/UrsKR9Ps" },
     ],
     // links to the pages you want to link to in the navbar
     navLinks: [{ href:"/about", name: "About"},
