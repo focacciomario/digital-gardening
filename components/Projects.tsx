@@ -31,11 +31,12 @@ export default function Projects() {
         </p>
         <div className="not-prose my-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="group relative rounded-xl border border-slate-200 dark:border-slate-800">
+            <a href="https://drive.google.com/file/d/1PG2itVoDzSJIvwxlmHyDgeTCEtYHyIDU/view?usp=drive_link" target="_blank">
             <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.sky.50)),var(--quick-links-hover-bg,theme(colors.sky.50)))_padding-box,linear-gradient(to_top,theme(colors.indigo.400),theme(colors.cyan.400),theme(colors.sky.500))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.slate.800)]" />
             <div className="relative overflow-hidden rounded-xl p-6">
               <img
                 src="/sitk.svg"
-                alt=""
+                alt="SimpleITK"
                 className="h-12 w-auto"
               />
               <h2 className="mt-4 font-display text-base text-primary dark:text-primary-dark">
@@ -46,6 +47,7 @@ export default function Projects() {
               Al termine delle operazioni, si ottiene una panoramica precisa delle variazioni tra le immagini toraciche originali e quelle registrate.
               </p>
             </div>
+            </a>
           </div>
 
           <div className="group relative rounded-xl border border-slate-200 dark:border-slate-800">
