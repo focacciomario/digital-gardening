@@ -9,7 +9,7 @@ tags:
   - FramerMotion
 ---
 
-# An open source motion library for React, made by Framer.
+### An open source motion library for React, made by Framer.
 
 Framer Motion is an open source, production-ready library for #React that’s designed for all creative developers.
 
