@@ -1,6 +1,22 @@
-import Hero from "@/components/Hero"
+
 import { SimpleLayout } from "@portaljs/core"
+import { useState } from "react"
+import { useRouter } from "next/router"
+
 export default function About (){
+
+    const [buttonText, setButtonText] = useState(`inviami un'email`);
+    const router = useRouter()
+
+    function handleClick() {
+        if (buttonText != `focacciomario@gmail.com`){
+        setButtonText('focacciomario@gmail.com');
+        }
+        else {
+        router.push('mailto:focacciomario@gmail.com')
+        }
+    }
+
     return(
     <SimpleLayout showSidebar="true" showToc="true">
         <div className="font-mono">
@@ -51,6 +67,15 @@ export default function About (){
             </p>
             
             <div className="w-full border-b-2 border-secondary"></div>
+            <p className="mt-4 text-center">
+            <button onClick={handleClick} 
+                className=" font-mono
+                px-3 py-1 no-underline bg-secondary text-white rounded-full 
+                shadow-lg transition hover:transition-all ease-in-out delay-150 
+                hover:bg-primary hover:text-secondary">
+                {buttonText}
+            </button>
+            </p>
 
         </div>
     </SimpleLayout>
