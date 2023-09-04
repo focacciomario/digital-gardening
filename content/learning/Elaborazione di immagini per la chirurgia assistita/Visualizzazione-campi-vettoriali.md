@@ -10,4 +10,6 @@ tags:
   - Jupyter Notebook
 ---
 
-<embed data="/Visualizzazione_campi_vettoriali.pdf" type="application/pdf"> 
+<object data="/Visualizzazione_campi_vettoriali.pdf" type="application/pdf" width="100%" height="500px">
+      <p>Unable to display PDF file? <a href="/Visualizzazione_campi_vettoriali.pdf">Download</a> instead.</p>
+    </object>
