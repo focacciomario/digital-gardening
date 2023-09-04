@@ -10,4 +10,5 @@ tags:
   - Jupyter Notebook
 ---
 
-![[Visualizzazione_campi_vettoriali.pdf]]
+<object data="/Visualizzazione_campi_vettoriali.pdf" type="application/pdf" width="100%"> 
+</object>
