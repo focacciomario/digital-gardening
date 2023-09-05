@@ -25,10 +25,12 @@ const config = {
     ],
     // links to the pages you want to link to in the navbar
     navLinks: [{ href:"/about", name: "About"},
+               //{ href:"/aboutGarden", name: "Su questo sito"},
                { href: "/progetti", name: "Progetti" },
                { href:"/learning", name: "Note"},
                { href: "/blog", name: "Blog" },
                { href:"/_all", name: "Indice"},
+               
             ],
     navbarTitle: {
       logo: "../../../logo.svg",
@@ -48,7 +50,7 @@ const config = {
       canonical: "https://mariofocaccio.it",
       openGraph: {
         title: "Mario Focaccio",
-        locale: 'en_US',
+        locale: 'it_IT',
         images: [
           {
             url: "https://flowershow.app/assets/images/frontpage-screenshot.jpg",

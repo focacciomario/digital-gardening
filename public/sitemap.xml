@@ -37,6 +37,16 @@
   </url>
 
   <url>
+    <loc
+      >https://mariofocaccio.it/learning/Elaborazione%20di%20immagini%20per%20la%20chirurgia%20assistita/Visualizzazione-campi-vettoriali</loc
+    >
+  </url>
+
+  <url>
+    <loc>https://mariofocaccio.it/learning/React/React-frameworks</loc>
+  </url>
+
+  <url>
     <loc>https://mariofocaccio.it//</loc>
   </url>
 
@@ -112,9 +122,5 @@
 
   <url>
     <loc>https://mariofocaccio.it/learning/Coding/Mautic-Shortcodes</loc>
-  </url>
-
-  <url>
-    <loc>https://mariofocaccio.it/blog/Tools-per-literature-mapping</loc>
   </url>
 </urlset>
