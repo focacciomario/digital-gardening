@@ -13,3 +13,4 @@ tags:
 <object data="/Visualizzazione_campi_vettoriali.pdf" type="application/pdf" width="100%" height="500px">
       <p>Unable to display PDF file? <a href="/Visualizzazione_campi_vettoriali.pdf">Download</a> instead.</p>
     </object>
+  <p className="font-mono">Preferisci effettuare il download? Scarica il file direttamente <a href="/Visualizzazione_campi_vettoriali.pdf">questo link</a>.</p>

@@ -90,17 +90,17 @@ export default function FormContatti (){
     
     return (
       <div className="card p-2 pb-5 lg:p-10">
-        <h3 className=" font-mono dark:text-white text-xl  font-bold mb-4underline text-decoration-8 decoration-secondary">
+        <h3 className=" font-mono dark:text-white text-xl font-bold">
           Benvenuto <i>{formNome}</i>, 
           </h3>  
-          <p className="font-mono"> Se lo desideri puoi inviarmi una richiesta direttamente tramite il form di contatto qui in basso 👇 
+          <p className="font-mono mb-5"> Se lo desideri puoi inviarmi una richiesta direttamente tramite il form di contatto qui in basso 👇 
             <br/> Risponderò non appena possibile, grazie. 
           </p>
-      <form onSubmit={handleSubmit} className="font-mono p-10 max-h-fit" >
+      <form onSubmit={handleSubmit} className="font-mono lg:p-10 max-h-fit" >
       
       <div className="relative">
       <label htmlFor="nome" className="label">
-        <span className="label-text">Nome e Cognome</span>
+        <span className="label-text font-bold italic">Nome e Cognome</span>
       </label> 
         <input type="text" name="nome" id="nome"  
         className="dark:bg-slate-900 input border-secondary border-2 w-full pr-16 mb-5" required 
@@ -109,7 +109,7 @@ export default function FormContatti (){
         /> 
 
         <label className="label" htmlFor="email">
-        <span className="label-text">Indirizzo email</span>
+        <span className="label-text font-bold italic">Indirizzo email</span>
       </label> 
         <input 
         id="email"
@@ -122,22 +122,23 @@ export default function FormContatti (){
         onChange={handleChange} /> 
   
         <label className="label" htmlFor="telefono">
-        <span className="label-text">Numero di telefono</span>
+        <span className="label-text font-bold italic">Numero di telefono</span>
       </label> 
         <input type="text" id="telefono" name="telefono" required
          className="dark:bg-slate-900 input border-secondary border-2 w-full pr-16 mb-5" 
          value={formTelefono}
         onChange={handleChangeTelefono}/> 
       <label className="label " htmlFor="messaggio">
-        <span className="label-text">Messaggio</span>
+        <span className="label-text font-bold italic">Messaggio</span>
       </label> 
         <Textarea id="messaggio" name="messaggio" 
-        rows={4} required
+          rows={4} 
+          required
           placeholder="Inserisci un breve messaggio per essere ricontattato" 
           className="input dark:bg-slate-900 border-secondary border-2 w-full pr-16 mb-5 font-mono" 
           value={formMessaggio}
-        onChange={handleChangeMessaggio}
-          />
+          onChange={handleChangeMessaggio}
+        />
 
       {/**checkbox dinamico */}
       <div className="relative mt-4 mb-4 flex gap-4 items-center align-middle" >
@@ -146,7 +147,7 @@ export default function FormContatti (){
 
 
                 <motion.div 
-            className="checkbox border-none "
+            className="checkbox border-none mb-15"
             onClick={() => {
               !isChecked && lineAnimation();
               setIsChecked(!isChecked);
@@ -207,7 +208,7 @@ export default function FormContatti (){
 
         </div>
         <div >
-          <p className=" text-[14px]">Confermo di aver letto e accettato le condizioni d&apos;uso contenute nella 
+          <p className=" text-[14px] mb-10">Confermo di aver letto e accettato le condizioni d&apos;uso contenute nella 
             <a href="https://www.iubenda.com/privacy-policy/25117591" 
             className=" text-[14px] hover:decoration-primary hover:underline hover:decoration-2"
             target="_blank">
@@ -219,7 +220,10 @@ export default function FormContatti (){
       </div>
 
       <button  type="submit" 
-      className="btn rounded-full mb-10 bg-secondary disabled:bg-white disabled:dark:bg-slate-900 disabled:dark:text-slate-700 disabled:text-slate-300 hover:cursor-pointer hover:bg-sky-100 hover:text-slate-900 text-white text-[16px] float-right  w-full mt-10 px-5 py-2"
+      className="btn rounded-full bg-secondary disabled:bg-white 
+      disabled:dark:bg-slate-900 disabled:dark:text-slate-700 disabled:text-slate-300 
+      hover:cursor-pointer hover:bg-sky-100 hover:text-slate-900 
+      text-white text-[16px] w-full px-5 py-2 mt-10 font-medium"
       disabled={!validate()}>
         Invia email
       </button>
