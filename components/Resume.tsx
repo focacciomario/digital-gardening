@@ -1,5 +1,8 @@
+
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { motion, useScroll, useViewportScroll } from "framer-motion";
+import { useRef } from "react";
 
 export default function Resume () {
 
@@ -39,21 +42,53 @@ export default function Resume () {
         
     ]
 
+    // FOR HORIZONTAL SCROLLING
+    //const ref = useRef(null);
+    //const { scrollYProgress } = useScroll({ container: ref });
+
+    const { scrollYProgress } = useScroll();
+
     return (
 
         
     <>
     
 
-    <div className="relative max-h-fit">
+    <motion.div className="relative max-h-fit"
+    initial={{ opacity: 0 }}
+                   
+    viewport={{ once: true, amount: 0.8 }}
+    animate={{opacity: 1, transition:{duration:1}}}
+    //ref={ref}
+    >
     <div className="mt-6 max-w-screen-lg md:flex mx-auto">
-    <div className="md:w-1/2 p-2">
-      <div className="md:fixed">
+    <div className="md:w-1/3 w-full ">
+      <div className="md:fixed text-center">
         <div className="md:block">
-          <img
-            className="h-32 w-32 rounded-full mx-auto"
-            src="https://avatars.githubusercontent.com/u/13237672?v=4"
-          />
+          <div className="items-center align-middle">
+            
+            
+          <div className="inherit top-1/2 left-1/2 ">
+              <svg id="progress" width="50" height="50" className="h-52 w-52 mx-auto" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="30" pathLength="1" className="bg z-0" />
+                <motion.circle
+                  cx="50"
+                  cy="50"
+                  r="30"
+                  pathLength="1"
+                  className="indicator inset-0"
+                  style={{ pathLength: scrollYProgress }}
+                />
+            </svg>
+           </div>
+           <div className="absolute w-full mx-auto align-middle items-center top-10 left-0 my-auto ">
+              <img
+                className="h-32 w-32 rounded-full mx-auto z-20"
+                src="https://avatars.githubusercontent.com/u/13237672?v=4"
+              />
+            </div>
+
+          </div>
           <div className="mb-12 text-center mt-4 justify-center items-center">
             <h1 className="text-2xl lg:text-xl text-gray-300 font-bold">
               Mario Focaccio
@@ -106,7 +141,7 @@ export default function Resume () {
         </div>
         <div className="mx-4 md:block text-center">
         <button onClick={handleClick} 
-                className=" font-mono
+                className=" font-mono text-xs font-bold
                 px-3 py-1 no-underline bg-secondary text-white rounded-full 
                 shadow-lg transition hover:transition-all ease-in-out delay-150 
                 hover:bg-primary hover:text-secondary w-full">
@@ -116,7 +151,7 @@ export default function Resume () {
       </div>
     </div>
 
-    <div className="md:w-2/3 p-2 w-full">
+    <div className="md:w-2/3 p-2 w-full" >
       <div className="mx-4 mb-6">
         <h1 className="mb-4 text-4xl text-white font-bold">Bio</h1>
         <p className="text-lg">
@@ -245,7 +280,7 @@ export default function Resume () {
       </div>
     </div>
   </div>
-  </div>
+  </motion.div>
   </>
     );
 }

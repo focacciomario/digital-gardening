@@ -165,4 +165,24 @@ html {
   transform: rotate(25deg);
 }
 
+#progress {
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+  z-index:-10;
+}
+
+.bg {
+  stroke: #fff;
+  opacity: 0.4;
+}
+
+#progress .indicator {
+  stroke: #38bdf8;
+}
+
 
