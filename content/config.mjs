@@ -29,6 +29,7 @@ const config = {
                { href: "/progetti", name: "Progetti" },
                { href:"/learning", name: "Note"},
                { href: "/blog", name: "Blog" },
+               { href: "/contatto", name: "Contatti" },
                { href:"/_all", name: "Indice"},
                
             ],

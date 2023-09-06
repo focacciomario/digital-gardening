@@ -5,3 +5,6 @@ node_modules/
 out/
 .obsidian/
 logo.ai
+.env
+.env.production
+.env.local

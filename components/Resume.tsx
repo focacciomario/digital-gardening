@@ -25,10 +25,18 @@ export default function Resume () {
     ]
 
     const certificazioni = [
-        {name: 'Corso CST Studio', azienda: 'Novamacut', data:'2022/09/30', descrizione:'Conoscenze e abilità di utilizzo del software CST Studio sviluppato da Dassault Systemes. Modellazione 3D, simulazione multifisica (meccanica e termica),Electronic Design Automation, Signal Integrity e Power Integrity '},
+        {name: 'React', azienda: 'Udemy', data:'2023/06/04', descrizione:'By Maximilian Schwarzmüller - Un approfondimento completo sulle funzionalità di React inclusi Hooks, React Router, Redux e NextJS'},     
+        {name: 'CST Studio', azienda: 'Novamacut', data:'2022/09/30', descrizione:'Conoscenze e abilità di utilizzo del software CST Studio sviluppato da Dassault Systemes. Modellazione 3D, simulazione multifisica (meccanica e termica),Electronic Design Automation, Signal Integrity e Power Integrity '},
         {name: 'Fondamenti di marketing digitale', azienda: 'Google Digital Training', data:'2019/12/28', descrizione:'Ottenuta a seguito del completamento della verifica erogata da Google EMEA e IAB Europe'},
         {name: 'AutoCAD Certified Professional', azienda: 'Autodesk', data:'2016/12/19', descrizione:'Codice della certificazione: '},
         {name: 'Corso AutoCAD rendering e stampa 3D', azienda: 'Istituto Volta', data:'2016/10/16', descrizione:'Corso di modellazione e stampa 3D utilizzando anche il software cloud Autodesk Fusion360'},
+    ]
+
+    const formazione = [
+        {name: 'Laurea Magistrale in Ingegneria Biomedica', azienda: 'Università degli Studi Magna Graecia di Catanzaro', data:'In corso', descrizione:' '},     
+        {name: 'Laurea in Ingegneria Informatica e Biomedica', azienda: 'Università degli Studi Magna Graecia di Catanzaro', data:'2022', descrizione:'Tesi di laurea: "Sviluppo di un dispositivo per il recupero energetico basato su polimeri ferroelettrici"'},
+        {name: 'Diploma di maturità scientifica', azienda: 'Liceo Scientifico "E. Fermi"', data:'2013', descrizione:' '},
+        
     ]
 
     return (
@@ -113,7 +121,7 @@ export default function Resume () {
         <h1 className="mb-4 text-4xl text-white font-bold">Bio</h1>
         <p className="text-lg">
           Studente magistrale in Ingegneria Biomedica presso l'Università degli Studi Magna Graecia di Catanzaro.<br/>
-          Appassionato di scienze e tecnologie, da sempre studio e leggo argomenti gravitanti intorno a questi mondi. 
+          Appassionato di scienze e tecnologie, da sempre studio e leggo argomenti gravitanti intorno a queste tematiche. 
           
         </p>
       </div>
@@ -123,7 +131,7 @@ export default function Resume () {
         <ul>
 
             {esperienze.map((item) => (
-                <li key={item.name} id={item.name}>
+                <li key={item.name} id={item.name} className="mt-3 mb-3">
                     <h2 className="text-2xl font-medium text-gray-300">
                     {item.name}
                     </h2>
@@ -154,10 +162,44 @@ export default function Resume () {
       </div>
       <div className="w-full border-b-2 border-secondary"></div>
       <div className="mx-4  mt-5 mb-5">
-        <h1 className="mb-4 text-4xl text-white font-bold">Certificazioni </h1>
+        <h1 className="mb-4 text-4xl text-white font-bold">Formazione accademica</h1>
+        <ul>
+        {formazione.map((item) => (
+                <li key={item.name} id={item.name} className="mt-3 mb-3">
+                    <h2 className="text-2xl font-medium text-gray-300">
+                    {item.name}
+                    </h2>
+                    <div className="mt-1">
+                    <div>
+                        <i className="bx bx-buildings" ></i>
+                        <small className="text-base text-gray-300">
+                        {item.azienda}
+                        </small>
+                    </div>
+                    <div>
+                        <i className="bx bx-calendar text-sm" ></i>
+                        <small className="text-sm text-white">
+                            {item.data}
+                        </small>
+                    </div>
+                    <div>
+                        <i className="bx bx-calendar text-sm" ></i>
+                        <small className="text-base text-gray-300">
+                            {item.descrizione}
+                        </small>
+                    </div>
+                    </div>
+                </li>
+            ))}
+
+        </ul>
+      </div>
+      <div className="w-full border-b-2 border-secondary"></div>
+      <div className="mx-4  mt-5 mb-5">
+        <h1 className="mb-4 text-4xl text-white font-bold">Corsi </h1>
         <ul>
         {certificazioni.map((item) => (
-                <li key={item.name} id={item.name}>
+                <li key={item.name} id={item.name} className="mt-3 mb-3">
                     <h2 className="text-2xl font-medium text-gray-300">
                     {item.name}
                     </h2>

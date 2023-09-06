@@ -96,3 +96,73 @@ html {
   }
 }
 
+.checkbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-items: center center;
+  cursor: pointer;
+}
+.checkbox .checkbox-container {
+  height: 2.0rem;
+  width: 2.0rem;
+  border-radius: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center center;
+}
+.checkbox .checkbox-container--front {
+  overflow: hidden;
+}
+.checkbox .checkbox-container--back {
+  border: #38bdf8 solid 2px;
+}
+.checkbox .checkmark {
+  fill: none;
+  position: relative;
+  padding-left: .9rem;
+  padding-bottom: 0.1rem;
+}
+.checkbox .checkmark path {
+  stroke-width: 35;
+  stroke-linecap: round;
+}
+.checkbox .checkmark--front path {
+  stroke: #fff;
+}
+.checkbox .checkmark--back path {
+  stroke: #38bdf8;
+}
+.checkbox .lines-container {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(-33deg);
+  border-radius: 50%;
+  position: absolute;
+  top: 0rem;
+  right: -0.5rem;
+}
+.checkbox .line {
+  height: 2px;
+  width: 13px;
+  background: rgb(56 189 248);
+  border-radius: 50%;
+  transform-origin: left;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  margin-left: 2.5rem;
+}
+.checkbox .line--1 {
+  transform: rotate(-25deg);
+}
+.checkbox .line--3 {
+  transform: rotate(25deg);
+}
+
+
